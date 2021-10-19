@@ -21,6 +21,14 @@ Route::get('/about', function () {
     return view('welcome');
 });
 
-Route::get('/index', function () {
+Route::get('/', function () {
     return view('index');
+});
+
+Route::get('/dashboard', function () {
+    return view('content-menu/admindashboard');
+});
+
+Route::get('/dashboard2', function () {
+    return view('content-menu/admindashboard2');
 });
