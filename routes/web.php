@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,3 +33,6 @@ Route::get('/dashboard', function () {
 Route::get('/dashboard2', function () {
     return view('content-menu/admindashboard2');
 });
+
+Route::get('/produk',[ProductController::class,'index'])->name('dataproduk');
+Route::get('/produk/delete/{id}',[ProductController::class,'destroy'])->name('hapus');
