@@ -14,7 +14,8 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        //
+        $items = Customer::all();
+        return view('customer', compact('items'));
     }
 
     /**
@@ -24,7 +25,7 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -78,8 +79,9 @@ class CustomerController extends Controller
      * @param  \App\Models\Customer  $customer
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Customer $customer)
+    public function destroy($id)
     {
-        //
+        Customer::destroy($id);
+        return redirect()->back();
     }
 }
