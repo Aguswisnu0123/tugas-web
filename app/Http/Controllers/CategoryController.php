@@ -81,7 +81,7 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        Customer::destroy($id);
+        Category::destroy($id);
         return redirect()->back();
     }
 }

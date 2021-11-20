@@ -25,13 +25,13 @@
                           <td>{{ $item->description }}</td>
                           <td>
                             <div class="action d-flex">
-                              <form action="{{ route('category.edit', $product->id) }}" method="post" class="mr-2">
+                              <form action="{{ route('category.edit', $item->id) }}" method="post" class="mr-2">
                                 @method('put')
                                 @csrf
                                   <button class="btn btn-flat btn-warning">Edit</button>
                               </form>
     
-                              <form action="{{ route('category.delete', $product->id) }}" method="post">
+                              <form action="{{ route('category.delete', $item->id) }}" method="post">
                                 @method('delete')
                                 @csrf
                                   <button class="btn btn-flat btn-danger" onclick="return confirm('Delete data?')">Hapus</button>
